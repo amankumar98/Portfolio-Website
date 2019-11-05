@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" href="images/Favicon.png">
 </head>
 <body>
-    
+    <div class="cursor"></div>
     <div id="bg"></div>
 
     <header>
@@ -41,6 +41,21 @@
         </section>
 
     </main>
+    <script>
 
+            const cursor = document.querySelector('.cursor');
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+            })
+    
+            document.addEventListener('click', () => {
+                cursor.classList.add("expand");
+    
+                setTimeout(() => {
+                    cursor.classList.remove("expand");
+                }, 500)
+            })
+    
+        </script>
 </body>
 </html>

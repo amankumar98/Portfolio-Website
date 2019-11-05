@@ -10,7 +10,7 @@ body {
 body #bg {
   -webkit-clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
           clip-path: polygon(100% 0, 100% 82%, 45% 100%, 0 100%, 0 0);
-  background-color: #005dff;
+  background-color: #266ce4;
   width: 100%;
   height: 100%;
   position: absolute;
@@ -78,7 +78,7 @@ body main section#card ul li span {
   content: '';
   width: 30px;
   height: 30px;
-  background-color: #ccdfff;
+  background-color: #dbe7fb;
   border-radius: 50%;
   margin-right: 10px;
 }
@@ -122,7 +122,7 @@ body main section#primary p {
 }
 
 body main section#primary a {
-  color: #001333;
+  color: #071937;
   border-radius: 15px;
   text-decoration: none;
   text-transform: uppercase;
@@ -139,5 +139,113 @@ body main section#primary a {
     display: inline-block;
     padding: 15px 60px;
   }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-animation: cursorAnium .5s infinite alternate;
+          animation: cursorAnium .5s infinite alternate;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid grey;
+  border-radius: 50%;
+  opacity: .5;
+  top: -8px;
+  left: -8px;
+  -webkit-animation: customAnim2 .5s infinite alternate;
+          animation: customAnim2 .5s infinite alternate;
+}
+
+@-webkit-keyframes customAnim {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@keyframes customAnim {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@-webkit-keyframes customAnim2 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+}
+
+@keyframes customAnim2 {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.4);
+            transform: scale(0.4);
+  }
+}
+
+@-webkit-keyframes customAnim3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes customAnim3 {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(3);
+            transform: scale(3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.expand {
+  -webkit-animation: customAnim3 .5s forwards;
+          animation: customAnim3 .5s forwards;
+  border: 1px solid red;
 }
 /*# sourceMappingURL=main.css.map */

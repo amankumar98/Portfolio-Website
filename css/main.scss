@@ -1,8 +1,8 @@
 
 $colors:(
-    primary: #005dff, 
-    primary-light: lighten(#005dff, 40%),
-    primary-dark: darken(#005dff, 40%),
+    primary: #266ce4, 
+    primary-light: lighten(#266ce4, 40%),
+    primary-dark: darken(#266ce4, 40%),
     accent: #fff6bb
 
 );
@@ -152,4 +152,61 @@ body{
         }
     
     }
+}
+.cursor{
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnium .5s infinite alternate;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid grey;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: customAnim2 .5s infinite alternate;
+
+}
+
+@keyframes customAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+@keyframes customAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+@keyframes customAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.expand {
+    animation: customAnim3 .5s forwards;
+    border: 1px solid red;
 }
